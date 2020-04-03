@@ -1,6 +1,8 @@
 {
 	"run_list": [
 		"recipe[base::users]",
-		"recipe[base::weechat]"
+		"recipe[base::weechat]",
+		"recipe[security::misc]",
+		"recipe[ssh::sshd]"
 	]
 }

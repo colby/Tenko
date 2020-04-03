@@ -6,5 +6,4 @@ end
 
 execute 'set hostname' do
   command "hostname #{node['hostname']}"
-  not_if "hostname = #{node['hostname']}"
 end

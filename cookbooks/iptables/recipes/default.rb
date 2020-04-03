@@ -6,6 +6,7 @@
 package node['iptables']['packages']
 
 template '/etc/iptables/rules.v4' do
+  cookbook 'iptables'
   source   'iptables.erb'
   notifies :run, 'execute[iptables reload]', :immediately
 end

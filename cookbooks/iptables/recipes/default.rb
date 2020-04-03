@@ -1,3 +1,8 @@
+#
+# Cookbook Name:: iptables
+# Recipe:: default
+#
+
 package node['iptables']['packages']
 
 template '/etc/iptables/rules.v4' do

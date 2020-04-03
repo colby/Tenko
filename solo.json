@@ -4,6 +4,7 @@
 		"recipe[base::packages]",
 		"recipe[base::users]",
 		"recipe[base::weechat]",
+		"recipe[iptables]",
 		"recipe[security::misc]",
 		"recipe[ssh::sshd]"
 	]

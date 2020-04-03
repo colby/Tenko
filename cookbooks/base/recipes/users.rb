@@ -33,3 +33,9 @@ file '/home/colby/.ssh/authorized_keys' do
   owner   'colby'
   group   'colby'
 end
+
+file '/etc/sudoers.d/90-colby-rules' do
+  action  :create
+  content 'colby ALL=(ALL) NOPASSWD:ALL'
+  mode    0440
+end

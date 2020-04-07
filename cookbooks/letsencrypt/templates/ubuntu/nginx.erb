@@ -1,7 +1,11 @@
 # Chef generated file. Edits will be lost.
 
-location ^~ /.well-known/acme-challenge {
-  root /var/lib/letsencrypt/;
-  satisfy any;
-  allow all;
+server {
+    listen 80;
+
+    location ^~ /.well-known/acme-challenge {
+        root /var/lib/letsencrypt/;
+        satisfy any;
+        allow all;
+    }
 }

@@ -9,8 +9,10 @@ directory '/etc/systemd/system/certbot.service.d/'
 
 file '/etc/systemd/system/certbot.service.d/override.conf' do
   content 'ExecStart=/usr/bin/certbot -q renew --post-hook "service nginx restart"'
+  notifies :run, 'execute[systemctl daemon-reload]', :immediately
 end
 
-systemd_unit 'certbox.service' do
-  triggers_reload true
+execute 'systemctl daemon-reload' do
+  command 'systemctl daemon-reload'
+  action :nothing
 end

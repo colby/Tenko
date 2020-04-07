@@ -1,5 +1,5 @@
-name             'iptables'
+name             'nginx'
 license          ''
-description      'iptables'
-long_description 'iptables'
+description      'nginx'
+long_description 'nginx'
 version          '0.0.1'

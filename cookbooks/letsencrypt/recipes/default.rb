@@ -5,7 +5,12 @@
 
 package node['letsencrypt']['packages']
 
-# template '/etc/nginx/nginx.conf' do
-#   source   'nginx.conf.erb'
-#   notifies :reload, 'service[nginx]', :delayed
-# end
+directory '/etc/systemd/system/certbot.service.d/'
+
+file '/etc/systemd/system/certbot.service.d/override.conf' do
+  content 'ExecStart=/usr/bin/certbot -q renew --post-hook "service nginx restart"'
+end
+
+systemd_unit 'certbox.service' do
+  triggers_reload true
+end

@@ -1,4 +1,4 @@
 #!/bin/bash
 set -x
-ssh -T colby@tenko 'cd Tenko || git clone https://github.com/colby/Tenko.git'
-ssh -T colby@tenko 'cd Tenko && git pull && sudo chef-solo -c solo.rb -j solo.json'
+ssh -T colby@colbyolson.com 'cd Tenko || git clone https://github.com/colby/Tenko.git'
+ssh -T colby@colbyolson.com 'cd Tenko && git pull && sudo chef-solo -c solo.rb -j solo.json'

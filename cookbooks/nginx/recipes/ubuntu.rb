@@ -4,6 +4,7 @@
 #
 
 file '/etc/nginx/sites-enabled/default' do
+  manage_symlink_source false
   action :delete
 end
 

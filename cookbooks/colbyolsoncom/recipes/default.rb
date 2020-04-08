@@ -9,12 +9,12 @@ directory '/opt/colbyolsoncom' do
   user 'colby'
 end
 
-directory '/var/www/colbyolsoncom' do
+directory '/var/www/html/colbyolsoncom' do
   user 'colby'
 end
 
 file '/etc/profile.d/colbyolsoncom.sh' do
-  content 'export BLOG_PATH=/var/www/colbyolsoncom'
+  content 'export BLOG_PATH=/var/www/html/colbyolsoncom'
   mode 0755
 end
 

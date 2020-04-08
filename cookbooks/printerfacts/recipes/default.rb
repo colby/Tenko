@@ -14,7 +14,7 @@ git '/opt/printerfacts' do
   user 'nobody'
 end
 
-template '/etc/nginx/sites-enabled/printerfacts' do
+template '/etc/nginx/conf.d/printerfacts' do
   source   'printerfacts.erb'
   notifies :reload, 'service[nginx]', :delayed
 end

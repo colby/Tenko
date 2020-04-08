@@ -14,7 +14,7 @@ git '/opt/printerfacts' do
   user 'nobody'
 end
 
-template '/etc/nginx/sites-enabled/printers' do
+template '/etc/nginx/sites-enabled/printerfacts' do
   source   'printerfacts.conf.erb'
   notifies :reload, 'service[nginx]', :delayed
 end
@@ -23,11 +23,6 @@ template '/etc/systemd/system/printerfacts.service' do
   source   'printerfacts.service.erb'
   notifies :run, 'execute[systemctl daemon-reload]', :immediately
 end
-
-# execute 'systemctl daemon-reload' do
-#   command 'systemctl daemon-reload'
-#   action :nothing
-# end
 
 service 'printerfacts' do
   action [:enable, :start]

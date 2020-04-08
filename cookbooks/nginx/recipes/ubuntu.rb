@@ -8,8 +8,3 @@ file '/etc/nginx/sites-enabled/default' do
   action :delete
   notifies :reload, 'service[nginx]', :delayed
 end
-
-template '/etc/nginx/nginx.conf' do
-  source   'nginx.conf.erb'
-  notifies :reload, 'service[nginx]', :delayed
-end

@@ -15,7 +15,7 @@ git '/opt/printerfacts' do
 end
 
 template '/etc/nginx/sites-enabled/printerfacts' do
-  source   'printerfacts.conf.erb'
+  source   'printerfacts.erb'
   notifies :reload, 'service[nginx]', :delayed
 end
 

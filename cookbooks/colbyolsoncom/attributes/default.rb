@@ -1,3 +1,3 @@
 default['colbyolsoncom']['packages'] = %w(
-  multimarkdown
+  libtext-multimarkdown-perl
 )

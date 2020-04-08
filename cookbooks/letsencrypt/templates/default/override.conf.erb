@@ -1,0 +1,4 @@
+[Service]
+ExecStartPre=service nginx stop
+ExecStart=/usr/bin/certbot -q renew
+ExecStartPost=service nginx start

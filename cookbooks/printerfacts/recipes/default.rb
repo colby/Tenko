@@ -3,16 +3,19 @@
 # Recipe:: default
 #
 
+directory '/opt/printerfacts' do
+  user 'nobody'
+end
+
 git '/opt/printerfacts' do
   repository 'https://github.com/colby/printerfacts.git'
   revision 'master'
   depth 1
   user 'nobody'
-  group 'nobody'
 end
 
 template '/etc/nginx/sites-enabled/printers' do
-  source   'printers.conf.erb'
+  source   'printerfacts.conf.erb'
   notifies :reload, 'service[nginx]', :delayed
 end
 

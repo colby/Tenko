@@ -3,8 +3,15 @@
 # Recipe:: default
 #
 
+package node['colbyolsoncom']['packages']
+
 directory '/opt/colbyolsoncom' do
   user 'nobody'
+end
+
+file '/etc/profile.d/colbyolsoncom.sh' do
+  content 'export BLOG_PATH=/opt/colbyolsoncom'
+  mode 0755
 end
 
 git '/opt/colbyolsoncom' do

@@ -21,3 +21,5 @@ execute 'systemctl daemon-reload' do
   command 'systemctl daemon-reload'
   action :nothing
 end
+
+# sudo certbot certonly --webroot --webroot-path /var/lib/letsencrypt/ --cert-name colbyolson.com -d www.colbyolson.com -m letsencrypt@colbyolson.com --agree-tos

@@ -8,7 +8,7 @@ directory '/opt/colbyolsoncom' do
 end
 
 git '/opt/colbyolsoncom' do
-  repository 'git@github.com:colby/colbyolson.com.git'
+  repository 'https://github.com/colby/colbyolson.com.git'
   revision 'master'
   depth 1
   user 'nobody'

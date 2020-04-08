@@ -1,7 +1,7 @@
 files = [
-  #'/etc/update-motd.d/00-header',
+  '/etc/update-motd.d/00-header',
   '/etc/update-motd.d/10-help-text',
-  #'/etc/update-motd.d/50-landscape-sysinfo -> /usr/share/landscape/landscape-sysinfo.wrapper',
+  '/etc/update-motd.d/50-landscape-sysinfo -> /usr/share/landscape/landscape-sysinfo.wrapper',
   '/etc/update-motd.d/50-motd-news',
   '/etc/update-motd.d/80-esm',
   '/etc/update-motd.d/80-livepatch',

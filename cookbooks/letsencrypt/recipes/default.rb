@@ -8,8 +8,13 @@ package node['letsencrypt']['packages']
 directory '/etc/systemd/system/certbot.service.d/'
 
 template '/etc/systemd/system/certbot.service.d/override.conf' do
-  source   'override.conf.erb'
+  source 'override.conf.erb'
   notifies :run, 'execute[systemctl daemon-reload]', :immediately
+end
+
+template '/etc/nginx/conf.d/letsencrypt' do
+  source 'letsencrypt.nginx.erb'
+  notifies :reload, 'service[nginx]', :delayed
 end
 
 execute 'systemctl daemon-reload' do

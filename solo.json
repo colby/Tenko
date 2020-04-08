@@ -1,5 +1,6 @@
 {
 	"run_list": [
+		"recipe[base::stfu]",
 		"recipe[base::hostname]",
 		"recipe[base::packages]",
 		"recipe[base::users]",

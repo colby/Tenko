@@ -28,7 +28,7 @@ execute 'init certificate' do
       --standalone
       --preferred-challenges http
       --cert-name colbyolson.com
-      -d www.colbyolson.com
+      -d colbyolson.com,www.colbyolson.com
       -m letsencrypt@colbyolson.com
       --agree-tos;
     service nginx start'

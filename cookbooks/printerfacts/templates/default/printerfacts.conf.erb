@@ -11,7 +11,7 @@ server {
 
     include conf.d/letsencrypt;
 
-    server_name colbyolson.com;
+    server_name colbyolson.com www.colbyolson.com;
 
     location ^/(print|printer|printers)/ {
         add_header Content-Type text/plain;

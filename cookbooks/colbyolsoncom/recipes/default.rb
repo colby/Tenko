@@ -10,8 +10,7 @@ directory '/opt/colbyolsoncom' do
 end
 
 directory '/var/www/colbyolsoncom' do
-  user 'nobody'
-  group 'colby'
+  user 'colby'
 end
 
 file '/etc/profile.d/colbyolsoncom.sh' do

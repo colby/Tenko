@@ -6,6 +6,7 @@
 		"recipe[base::weechat]",
 		"recipe[iptables]",
 		"recipe[letsencrypt]",
+		"recipe[printerfacts]",
 		"recipe[nginx]",
 		"recipe[security::misc]",
 		"recipe[ssh::sshd]"

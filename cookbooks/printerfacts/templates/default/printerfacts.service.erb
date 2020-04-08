@@ -1,0 +1,15 @@
+[Unit]
+Description=Printerfacts
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=nobody
+WorkingDirectory=/opt/printerfacts
+ExecStart="./print &"
+
+[Install]
+WantedBy=multi-user.target

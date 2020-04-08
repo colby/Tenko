@@ -9,6 +9,10 @@ user 'colby' do
   manage_home true
 end
 
+user 'ubuntu' do
+  action :remove
+end
+
 groups = %w(adm sudo admin)
 
 groups.each do |g|

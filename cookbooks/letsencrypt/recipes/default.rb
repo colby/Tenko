@@ -19,11 +19,14 @@ end
 
 execute 'init certificate' do
   command 'service nginx stop;
-    certbot certonly --standalone --preferred-challenges http --cert-name colbyolson.com -d www.colbyolson.com -m letsencrypt@colbyolson.com --agree-tos;
+    certbot certonly
+      --standalone
+      --preferred-challenges http
+      --cert-name colbyolson.com
+      -d www.colbyolson.com
+      -m letsencrypt@colbyolson.com
+      --agree-tos;
     service nginx start'
   action :run
   not_if 'certbot certificates | grep colbyolson.com'
 end
-
-# sudo certbot certonly --standalone --preferred-challenges http --cert-name colbyolson.com -d www.colbyolson.com -m letsencrypt@colbyolson.com --agree-tos
-# sudo certbot certonly --webroot --webroot-path /var/lib/letsencrypt/ --cert-name colbyolson.com -d www.colbyolson.com -m letsencrypt@colbyolson.com --agree-tos

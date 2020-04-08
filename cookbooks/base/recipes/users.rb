@@ -39,3 +39,7 @@ file '/etc/sudoers.d/90-colby-rules' do
   content 'colby ALL=(ALL) NOPASSWD:ALL'
   mode    0440
 end
+
+file '/home/colby/.hushlogin' do
+  mode 0400
+end

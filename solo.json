@@ -5,6 +5,7 @@
 		"recipe[base::users]",
 		"recipe[base::weechat]",
 		"recipe[colbyolsoncom]",
+		"recipe[tailscale]",
 		"recipe[iptables]",
 		"recipe[letsencrypt]",
 		"recipe[printerfacts]",

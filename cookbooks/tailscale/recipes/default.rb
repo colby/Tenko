@@ -3,8 +3,10 @@
 # Recipe:: default
 #
 
+package node['tailscale']['packages']
+
 apt_repository 'tailscale' do
-  uri        'https://pkgs.tailscale.com/stable/ubuntu'
+  uri 'https://pkgs.tailscale.com/stable/ubuntu'
   components ['main']
-  keyserver 'https://pkgs.tailscale.com/stable/ubuntu/bionic.gpg'
+  key 'https://pkgs.tailscale.com/stable/ubuntu/bionic.gpg'
 end

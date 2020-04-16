@@ -1,9 +1,6 @@
 {
 	"run_list": [
-		"recipe[base::hostname]",
-		"recipe[base::packages]",
-		"recipe[base::users]",
-		"recipe[base::weechat]",
+		"recipe[base]",
 		"recipe[colbyolsoncom]",
 		"recipe[tailscale]",
 		"recipe[iptables]",

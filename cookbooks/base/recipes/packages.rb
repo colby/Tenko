@@ -1,7 +1,1 @@
-packages = %w(
-  tmux
-  htop
-  nmap
-)
-
-package packages
+package node['packages']

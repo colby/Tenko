@@ -1,4 +1,4 @@
-packages = node['packages']
+packages = node['_packages']
 
 packages.each do |p|
   package p

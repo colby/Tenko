@@ -3,8 +3,8 @@
 # Recipe:: default
 #
 
-recipes = node['recipes']
+recipes = node['_recipes']
 
-recipes.each do |recipe|
-  include_recipe "base::#{recipe}"
+recipes.each do |r|
+  include_recipe "base::#{r}"
 end

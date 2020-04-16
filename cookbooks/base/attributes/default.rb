@@ -1,6 +1,6 @@
 default['hostname'] = 'tenko'
 
-default['recipes'] = %w(
+default['_recipes'] = %w(
   hostname
   packages
   timezone
@@ -8,7 +8,7 @@ default['recipes'] = %w(
   weechat
 )
 
-default['packages'] = %w(
+default['_packages'] = %w(
   htop
   nmap
   tmux

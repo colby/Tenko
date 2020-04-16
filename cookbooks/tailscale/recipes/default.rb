@@ -11,7 +11,7 @@ end
 
 package node['tailscale']['packages']
 
-gpg_key = Chef::Config[:file_cache_path] + 'bionic.gpg'
+gpg_key = Chef::Config[:file_cache_path] + '/bionic.gpg'
 
 file gpg_key do
   action :delete

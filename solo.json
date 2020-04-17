@@ -8,6 +8,7 @@
 		"recipe[printerfacts]",
 		"recipe[nginx]",
 		"recipe[security::misc]",
-		"recipe[ssh::sshd]"
+		"recipe[ssh::sshd]",
+		"role[base]"
 	]
 }

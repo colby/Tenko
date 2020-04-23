@@ -5,7 +5,12 @@
 
 package node['fail2ban']['packages']
 
-directory '/var/log/fail2ban/'
+%w[
+  /var/log/fail2ban
+  /etc/systemd/system/fail2ban.service.d
+].each do |d|
+  directory d
+end
 
 template '/etc/systemd/system/fail2ban.service.d/override.conf' do
   source 'override.conf.erb'

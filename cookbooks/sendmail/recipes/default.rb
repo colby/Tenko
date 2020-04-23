@@ -5,11 +5,6 @@
 
 package node['sendmail']['packages']
 
-# template '' do
-#   source ''
-#   notifies :restart, 'service[]', :delayed
-# end
-#
-# service '' do
-#   action [:enable, :start]
-# end
+template '/etc/msmtprc' do
+  source 'msmtprc.erb'
+end

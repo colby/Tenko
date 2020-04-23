@@ -9,6 +9,7 @@
 		"recipe[printerfacts]",
 		"recipe[security::misc]",
 		"recipe[ssh::sshd]",
-		"recipe[tailscale]"
+		"recipe[tailscale]",
+		"role[base]"
 	]
 }

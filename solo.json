@@ -2,12 +2,13 @@
 	"run_list": [
 		"recipe[base]",
 		"recipe[colbyolsoncom]",
-		"recipe[tailscale]",
+		"recipe[fail2ban]",
 		"recipe[iptables]",
 		"recipe[letsencrypt]",
-		"recipe[printerfacts]",
 		"recipe[nginx]",
+		"recipe[printerfacts]",
 		"recipe[security::misc]",
-		"recipe[ssh::sshd]"
+		"recipe[ssh::sshd]",
+		"recipe[tailscale]"
 	]
 }

@@ -8,6 +8,7 @@
 		"recipe[nginx]",
 		"recipe[printerfacts]",
 		"recipe[security::misc]",
+		"recipe[sendmail]",
 		"recipe[ssh::sshd]",
 		"recipe[tailscale]",
 		"role[base]"

@@ -1,0 +1,5 @@
+name             'sendmail'
+license          ''
+description      'sendmail'
+long_description 'sendmail'
+version          '0.0.1'

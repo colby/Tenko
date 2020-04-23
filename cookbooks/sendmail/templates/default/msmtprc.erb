@@ -1,17 +1,16 @@
 # Chef generated file. Edits will be lost.
 
 defaults
-auth           on
+auth on
+port 587
 
-tls            on
+tls on
 tls_trust_file /etc/ssl/certs/ca-certificates.crt
 
-account        gmail
-host           smtp.gmail.com
-port           587
+account gmail
+host smtp.gmail.com
 
-from           tenko@colbyolson.com
-user           username
-password       password
+user me@colbyolson.com
+password password
 
 account default : gmail

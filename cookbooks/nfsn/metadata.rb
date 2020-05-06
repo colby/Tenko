@@ -1,0 +1,5 @@
+name             'nfsn'
+license          ''
+description      'nfsn'
+long_description 'nfsn'
+version          '0.0.1'

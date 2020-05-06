@@ -10,6 +10,7 @@
 		"recipe[security::misc]",
 		"recipe[sendmail]",
 		"recipe[ssh::sshd]",
+		"recipe[nfsn]",
 		"recipe[tailscale]",
 		"role[base]"
 	]
